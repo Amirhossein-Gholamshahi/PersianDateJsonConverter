@@ -13,15 +13,22 @@ namespace PersianDateJsonConverter
         public int Age { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public Vacation(int personnelID, string name, int Age, DateTime startDate, DateTime EndDate)
+        public Vacation(int personnelId, string name, int Age, DateTime startDate, DateTime EndDate)
         {
-            this.PersonnelId = personnelID;
+            this.PersonnelId = personnelId;
             this.Name = name;
             this.Age = Age;
             this.StartDate = startDate;
             this.EndDate = EndDate;
         }
 
-        public Vacation() { }
+        public override string ToString()
+        {
+            return $"PersonnelId: {PersonnelId}\n" +
+               $"Name: {Name}\n" +
+               $"Age: {Age}\n" +
+               $"StartDate: {StartDate:yyyy/MM/dd}\n" +
+               $"EndDate: {EndDate:yyyy/MM/dd}";
+        }
     }
 }

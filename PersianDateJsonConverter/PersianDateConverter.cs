@@ -18,10 +18,17 @@ namespace PersianDateJsonConverter
     {
         static void Main(string[] args)
         {
-            var vacation = new Vacation(1, "amir", 22, DateTime.Now, DateTime.Now.AddDays(-1));
+            var vacation = new Vacation(1, "amir", 22, DateTime.Now, DateTime.Now.AddDays(5));
             var serilizeTest = JsonConvert.SerializeObject(vacation, Formatting.Indented, new PersianDateConverter());
 
-            var json = "{\"PersonnelId\": 1, \"Name\": \"Ali\", \"Age\": 22,  \"StartDate\": \"2024/08/22\", \"EndDate\": \"2024/08/29\"}";
+            var json = @"{
+              ""PersonnelId"": 1,
+              ""Name"": ""Ali"",
+              ""Age"": 22,
+              ""StartDate"": ""2024/08/22"",
+              ""EndDate"": ""2024/08/29""
+            }";
+
             var deserilizedObject = JsonConvert.DeserializeObject<Vacation>(json, new PersianDateConverter());
         }
 
