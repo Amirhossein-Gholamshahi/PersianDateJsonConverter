@@ -41,9 +41,16 @@ var serilizeTest = JsonConvert.SerializeObject(vacation, Formatting.Indented, ne
 var json = "{\"PersonnelId\": 1, \"Name\": \"Ali\", \"Age\": 22,  \"StartDate\": \"2024/08/22\", \"EndDate\": \"2024/08/29\"}";
 var deserilizedObject = JsonConvert.DeserializeObject<Vacation>(json, new PersianDateConverter());
 
-//
+/*OutPut:
+{
+  PersonnelId: 1
+  Name: Ali
+  Age: 22
+  StartDate: 1403/06/01
+  EndDate: 1403/06/08
+}*/
 ```
 
 
 ## ToDo
-make the converted Generic so it can be used on any given Types.
+Make the Classes and Methods Genereic so it can be used on any given Types.
