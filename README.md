@@ -59,5 +59,5 @@ var deserilizedObject = JsonConvert.DeserializeObject<Vacation>(json, new Persia
 
 
 ## ToDo
-Make the Classes and Methods Genereic so it can be used on any given Types.
+Make the Classes and Methods Genereic so it can be used on any given Types.  
 Refactor Methods to support multiple data types including arrays and objects, while retaining DateTime handling functionality.
