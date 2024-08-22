@@ -1,7 +1,7 @@
 
 # JSON Serialization and Deserialization Example
 
-This is a custom JsonConverted implemented using the famous [Newtonsoft](https://www.newtonsoft.com/json) Library.
+This is a custom JsonConverter implemented using the famous [Newtonsoft](https://www.newtonsoft.com/json) Library.
 
 ## JSON Structure
 
@@ -60,3 +60,4 @@ var deserilizedObject = JsonConvert.DeserializeObject<Vacation>(json, new Persia
 
 ## ToDo
 Make the Classes and Methods Genereic so it can be used on any given Types.
+Refactor Methods to support multiple data types including arrays and objects, while retaining DateTime handling functionality.
