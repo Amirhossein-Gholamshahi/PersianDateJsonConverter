@@ -25,14 +25,14 @@ The JSON object we will be working with has the following structure:
 var vacation = new Vacation(1, "amir", 22, DateTime.Now, DateTime.Now.AddDays(+5));
 var serilizeTest = JsonConvert.SerializeObject(vacation, Formatting.Indented, new PersianDateConverter());
 
-//OutPut:
+/*OutPut:
 {
   "PersonnelId": 1,
   "Name": "amir",
   "Age": 22,
   "StartDate": "1403/06/01",
   "EndDate": "1403/06/06"
-}
+}*/
 ```
 
 
