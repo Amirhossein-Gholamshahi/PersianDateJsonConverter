@@ -38,7 +38,13 @@ var serilizeTest = JsonConvert.SerializeObject(vacation, Formatting.Indented, ne
 
 ### Deserialization
 ```C#
-var json = "{\"PersonnelId\": 1, \"Name\": \"Ali\", \"Age\": 22,  \"StartDate\": \"2024/08/22\", \"EndDate\": \"2024/08/29\"}";
+var json = "{
+  "PersonnelId": 1,
+  "Name": "Ali",
+  "Age": 22,
+  "StartDate": "2024/08/22",
+  "EndDate": "2024/08/29"
+}";
 var deserilizedObject = JsonConvert.DeserializeObject<Vacation>(json, new PersianDateConverter());
 
 /*OutPut:
